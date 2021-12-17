@@ -19,6 +19,7 @@ namespace Week3_homework_1_and_2
         {
             this.PersonSetup();
         }
+
         private void PersonSetup()
         {
             Console.WriteLine(@"Podaj swoje imię (nie więcej niż 25 znaków, nie używaj następujących znaków: '*', ' ', '\'' oraz cyfr): ");
@@ -41,6 +42,7 @@ namespace Week3_homework_1_and_2
             this.placeOfbirth = place;
             this.ageOfPerson = new DateTime(year, month, day);
         }
+
         public void PersonIntro()
         {
             var age = DateTime.Now.Year - this.ageOfPerson.Year;
@@ -57,6 +59,7 @@ namespace Week3_homework_1_and_2
             PrintColorMessage(ConsoleColor.DarkYellow, $"{age}");
             Console.WriteLine();
         }
+
         private static int DateValidation(string value, int min, int max)
         {
             while (true)
@@ -76,6 +79,7 @@ namespace Week3_homework_1_and_2
                 return nr;
             }
         }
+
         private static string NameValidation(string str)
         {
             char[] charsToTrim = { '*', ' ', '\'', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0' };
